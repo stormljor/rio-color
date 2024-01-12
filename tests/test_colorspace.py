@@ -58,7 +58,7 @@ def test_fixtures(pair):
 
 def _near(a, b, tol):
 
-    if not isinstance(tol, collections.Iterable):
+    if not isinstance(tol, collections.abc.Iterable):
         tol = [tol] * len(a)
 
     for x, y, t in zip(a, b, tol):
